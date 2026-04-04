@@ -5,6 +5,11 @@ export default defineConfig({
   title: "eliteToken文档库",
   description: "eliteToken使用文档本地镜像",
   cleanUrls: true,
+  vite: {
+    server: {
+      allowedHosts: ["docs.superelite.studio"]
+    }
+  },
   themeConfig: {
     nav: [
       { text: "简介", link: "/" },
