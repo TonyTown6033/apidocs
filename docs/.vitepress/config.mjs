@@ -59,7 +59,6 @@ export default defineConfig({
         ]
       }
     ],
-    socialLinks: [{ icon: "github", link: "https://github.com/" }],
     search: {
       provider: "local"
     }

@@ -5,19 +5,37 @@ title: 欢迎使用 eliteToken
 
 # 欢迎使用 eliteToken 
 
-统一的大模型接口网关。更好的价格，更好的稳定性，为你提供 Claude Code、Codex、Gemini CLI 等主流工具的高效集成体验。
+统一的大模型接口网关。通过 OpenAI 与 Anthropic 兼容端点，为 Claude Code、Codex 等客户端提供模型接入。
 
 [访问官网](https://superelite.studio/) 查看平台入口，首次使用建议先看[注册与充值](/guide/register)和[创建令牌](/guide/token)。
 
-## 官方网站
+## 官方网站与接口
 
-- `https://superelite.studio/`
+- 官网：`https://superelite.studio/`
+- OpenAI 兼容 Base URL：`https://superelite.studio/v1`
+- Anthropic Base URL：`https://superelite.studio`
 
-eliteToken是一个 AI API 中转服务平台，为开发者提供稳定、高效的模型接入服务。支持 Claude、GPT、Gemini 等主流模型，一个令牌即可访问多种 AI 能力，无需分别注册各个平台账号。
+eliteToken 是一个 AI API 网关，为开发者统一接入多种模型。官网当前展示的接口包括：
+
+- `/v1/chat/completions`
+- `/v1/responses`
+- `/v1/responses/compact`
+- `/v1/messages`
+- `/v1beta/models`
+- `/v1/embeddings`
+- `/v1/rerank`
+- `/v1/images/generations`
+- `/v1/images/edits`
+- `/v1/images/variations`
+- `/v1/audio/speech`
+- `/v1/audio/transcriptions`
+- `/v1/audio/translations`
+
+具体模型是否支持某个端点，请以[模型广场](https://superelite.studio/pricing)为准。
 
 ## 快速上手
 
-- 快速注册：完成账户注册，支持多种快捷登录方式。
+- 注册账户：使用邮箱完成注册和验证。
 - 创建令牌：生成专属 API Key，连接本地开发环境。
 - 安装配置：覆盖 Windows、macOS、Linux 三个平台。
 - 模型计费：查看模型特点、分组和按量付费说明。
@@ -35,7 +53,7 @@ eliteToken是一个 AI API 中转服务平台，为开发者提供稳定、高�
 | --- | --- | --- |
 | Claude Code | 理解项目能力强 | 复杂项目、代码重构 |
 | Codex (GPT) | OpenAI 出品，任务完成细致 | 通用编程、代码生成 |
-| Gemini CLI | 前端能力出色 | 前端开发、快速原型 |
+| Gemini CLI | 是否可用取决于平台当前模型与端点 | 使用前先查看模型广场 |
 
 ## 什么是中转站
 

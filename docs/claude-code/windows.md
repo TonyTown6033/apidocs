@@ -5,9 +5,25 @@
 
 ## 一键安装
 
-在powershell里执行这条命令，并填入token便可安装和配置claude code
+平台提供 Windows 初始化脚本，可安装 Git for Windows、Claude Code 和 CC Switch，并写入 Claude 配置。
+
+> 安全提示：不要直接执行未经审查的远程脚本。建议先下载并检查脚本，再在 PowerShell 中运行。脚本会将 API Key 写入本地配置，并把请求发送到 `superelite.studio`。
+
 ```powershell
-irm 81.68.170.234:9001/scripts/init-claude.ps1 | iex
+Invoke-WebRequest `
+  -Uri "https://superelite.studio/scripts/init-claude.ps1" `
+  -OutFile ".\init-claude.ps1"
+
+Get-AuthenticodeSignature .\init-claude.ps1
+Get-FileHash .\init-claude.ps1 -Algorithm SHA256
+
+.\init-claude.ps1
+```
+
+如需跳过自动启动 CC Switch：
+
+```powershell
+.\init-claude.ps1 -SkipLaunchCCSwitch
 ```
 
 
@@ -72,7 +88,7 @@ claude --version
 ```json
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "https://superelite.studio/",
+    "ANTHROPIC_BASE_URL": "https://superelite.studio",
     "ANTHROPIC_AUTH_TOKEN": "sk-你的令牌"
   }
 }

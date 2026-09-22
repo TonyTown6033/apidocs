@@ -27,7 +27,7 @@ powershell -Command "$f='%USERPROFILE%\.claude.json';$j=Get-Content $f|ConvertFr
 ## 响应速度慢
 
 - 检查网络连接是否稳定
-- 尝试切换到速度更快的模型，例如 Gemini Flash
+- 在模型广场中比较模型价格与能力，尝试切换到更适合当前任务的模型
 - 减少单次请求的上下文长度
 
 ## 推荐配置
@@ -37,7 +37,7 @@ powershell -Command "$f='%USERPROFILE%\.claude.json';$j=Get-Content $f|ConvertFr
 ```json
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "https://superelite.studio/",
+    "ANTHROPIC_BASE_URL": "https://superelite.studio",
     "ANTHROPIC_AUTH_TOKEN": "sk-你的令牌",
     "CLAUDE_CODE_ATTRIBUTION_HEADER": "0",
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"

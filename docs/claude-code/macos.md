@@ -40,7 +40,7 @@ Zsh 用户：
 
 ```bash
 echo 'export ANTHROPIC_AUTH_TOKEN="sk-你的令牌"' >> ~/.zshrc
-echo 'export ANTHROPIC_BASE_URL="https://superelite.studio/"' >> ~/.zshrc
+echo 'export ANTHROPIC_BASE_URL="https://superelite.studio"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
@@ -48,6 +48,6 @@ Bash 用户：
 
 ```bash
 echo 'export ANTHROPIC_AUTH_TOKEN="sk-你的令牌"' >> ~/.bash_profile
-echo 'export ANTHROPIC_BASE_URL="https://superelite.studio/"' >> ~/.bash_profile
+echo 'export ANTHROPIC_BASE_URL="https://superelite.studio"' >> ~/.bash_profile
 source ~/.bash_profile
 ```

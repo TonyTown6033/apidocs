@@ -13,13 +13,13 @@ CC-Switch 是推荐的配置方式，支持一键切换多个 API 配置。
 
 ## 下载安装
 
-访问 [CC-Switch 下载页面](https://github.com/) 下载程序，Windows 用户优先选择 `.msi` 安装包。
+访问 [CC-Switch Releases](https://github.com/farion1231/cc-switch/releases) 下载程序，Windows 用户优先选择 `.msi` 安装包。下载后建议核对 Release 信息和安装包数字签名。
 
 ## 配置 API
 
 1. 安装完成后启动 CC-Switch
 2. 点击“添加配置”
-3. 填写 API Key 和请求地址 `https://superelite.studio/`
-4. 点击“启用”完成配置
+3. 填写 API Key 和请求地址 `https://superelite.studio`；如果客户端要求 OpenAI 兼容接口，使用 `https://superelite.studio/v1`
+4. 选择支持的模型分组（当前网站展示 `default` 和 `vip` 分组），点击“启用”完成配置
 
 使用 CC-Switch 时，通常不需要再手动编辑 Claude 的配置文件。

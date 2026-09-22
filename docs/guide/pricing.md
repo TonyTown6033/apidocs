@@ -1,51 +1,69 @@
-# 价格说明
+# 模型与价格
 
-了解各套餐区别，选择适合自己的方案。
+本页根据 [eliteToken 模型广场](https://superelite.studio/pricing) 的实时数据整理。价格可能随渠道和平台策略变化，实际扣费请始终以模型广场及使用日志为准。
+
+## 接口与分组
+
+当前模型广场公开的可用分组：
+
+- `default`：默认分组
+- `vip`：vip分组
+
+当前兼容端点：
+
+| 类型 | 方法 | 路径 | 基础地址 |
+| --- | --- | --- | --- |
+| anthropic | `POST` | `/v1/messages` | `https://superelite.studio` |
+| openai | `POST` | `/v1/chat/completions` | `https://superelite.studio` |
+
+> OpenAI 兼容客户端通常将 Base URL 设置为 `https://superelite.studio/v1`；Claude Code 使用 `ANTHROPIC_BASE_URL=https://superelite.studio`。
+
+## 当前模型价格
+
+下表单位均为 **人民币 / 1M Tokens**。“—”表示官网当前数据未提供该价格项。
+
+### Claude
+
+| 模型 | 输入 | 输出 | 缓存读取 | 缓存创建 | 上下文/能力 | 支持端点 |
+| --- | ---: | ---: | ---: | ---: | --- | --- |
+| `claude-sonnet-4-6` | ¥0.2700 | ¥1.3500 | ¥0.0270 | ¥0.3375 | Reasoning,Tools,Files,Vision,1M | `anthropic`、`openai` |
+| `claude-opus-4-7` | ¥1.5000 | ¥7.5000 | ¥0.1500 | ¥1.9200 | Reasoning,Tools,Files,Vision,1M | `anthropic`、`openai` |
+| `claude-sonnet-5` | ¥0.4320 | ¥2.1600 | — | — | Reasoning,Tools,Files,Vision,1M | `anthropic`、`openai` |
+| `claude-fable-5-1` | ¥3.0000 | ¥15.0000 | — | — | Reasoning,Tools,Files,Vision,1M | `anthropic`、`openai` |
+| `claude-haiku-4-5` | ¥0.1800 | ¥0.9000 | ¥0.0180 | ¥1.1077 | Reasoning,Tools,Files,Vision,200K | `anthropic`、`openai` |
+| `claude-opus-4-8` | ¥0.1275 | ¥0.6375 | ¥0.0102 | ¥0.1632 | Reasoning,Tools,Files,Vision,1M | `anthropic`、`openai` |
+| `claude-opus-4-6` | ¥1.5000 | ¥7.5000 | ¥0.1200 | ¥1.9200 | Reasoning,Tools,Files,Vision,1M | `anthropic`、`openai` |
+| `claude-fable-5` | ¥0.9000 | ¥5.5500 | ¥0.0900 | ¥1.1077 | Reasoning,Tools,Files,Vision,1M | `anthropic`、`openai` |
+| `claude-opus-5` | ¥1.5000 | ¥7.5000 | — | — | Reasoning,Tools,Files,Vision,1M | `anthropic`、`openai` |
+
+### OpenAI GPT
+
+| 模型 | 输入 | 输出 | 缓存读取 | 缓存创建 | 上下文/能力 | 支持端点 |
+| --- | ---: | ---: | ---: | ---: | --- | --- |
+| `gpt-5.6-sol` | ¥0.3000 | ¥2.4000 | ¥0.0300 | ¥0.3000 | Reasoning,Tools,Files,Vision,1.1M | `openai`、`anthropic` |
+| `gpt-5.6-luna` | ¥0.0120 | ¥0.0960 | ¥0.0012 | ¥0.0120 | Reasoning,Tools,Files,Vision,1.1M | `openai`、`anthropic` |
+| `gpt-5.5` | ¥0.0375 | ¥0.3000 | ¥0.0037 | ¥0.0375 | Reasoning,Tools,Files,Vision,1.1M | `openai`、`anthropic` |
+| `gpt-5.6` | ¥0.3000 | ¥2.4000 | ¥0.0300 | — | Reasoning,Tools,Files,Vision,1.1M | `openai` |
+| `gpt-6-astra` | ¥2.0000 | ¥10.0000 | — | — | Reasoning,Tools,Files,Vision,1.1M | `anthropic`、`openai` |
+| `gpt-5.6-terra` | ¥0.3000 | ¥2.4000 | ¥0.0400 | ¥0.4000 | Reasoning,Tools,Files,Vision,1.1M | `openai`、`anthropic` |
+
+### DeepSeek
+
+| 模型 | 输入 | 输出 | 缓存读取 | 缓存创建 | 上下文/能力 | 支持端点 |
+| --- | ---: | ---: | ---: | ---: | --- | --- |
+| `deepseek-v4-pro` | ¥0.3480 | ¥0.6960 | ¥0.0029 | ¥0.0290 | Reasoning,Tools,Open Weights,1M | `openai` |
+| `deepseek-flash` | ¥0.1500 | ¥0.6000 | ¥0.0030 | — | Reasoning,Tools,Files,Open Weights,Vision,1M | `openai` |
+
+### 图像
+
+| 模型 | 输入 | 输出 | 缓存读取 | 缓存创建 | 上下文/能力 | 支持端点 |
+| --- | ---: | ---: | ---: | ---: | --- | --- |
+| `gpt-image-2` | ¥1.0000 | ¥6.0000 | ¥0.2500 | — | Files,Vision | `openai` |
 
 ## 计费说明
 
-- 页面展示价格以美元为基础，原站标注 `$ * 0.2 = 人民币价格`
-- 不同模型按分组计费，输入和输出价格分开计算
-- 图片和视频模型通常为按次计费
-
-## Claude 模型示例
-
-| 模型 | 输入价格 | 输出价格 | 说明 |
-| --- | --- | --- | --- |
-| `claude-haiku-4-5-20251001` | `$0.5000 / 1M` | `$2.5000 / 1M` | Anthropic Claude 4.5 Haiku |
-| `claude-opus-4-5-20251101` | `$2.5000 / 1M` | `$12.5000 / 1M` | Claude Opus 4.5 |
-| `claude-opus-4-6` | `$5.0000 / 1M` | `$25.0000 / 1M` | 更新一代旗舰模型 |
-| `claude-sonnet-4-5-20250929` | `$1.5000 / 1M` | `$7.5000 / 1M` | Claude Sonnet 4.5 |
-
-## Gemini 模型示例
-
-| 模型 | 输入价格 | 输出价格 | 说明 |
-| --- | --- | --- | --- |
-| `gemini-2.0-flash` | `$1.0000 / 1M` | `$4.0000 / 1M` | Google 系工具、多模态模型 |
-| `gemini-2.5-flash` | `$1.0000 / 1M` | `$9.0000 / 1M` | 适合速度优先场景 |
-| `gemini-2.5-pro` | `$1.7500 / 1M` | `$15.0000 / 1M` | 复杂推理任务 |
-| `gemini-3-pro-preview` | `$3.0000 / 1M` | `$18.0000 / 1M` | 预览版高能力模型 |
-
-## OpenAI 模型示例
-
-| 模型 | 输入价格 | 输出价格 | 说明 |
-| --- | --- | --- | --- |
-| `gpt-5` | `$1.7500 / 1M` | `$14.0000 / 1M` | 按量计费 |
-| `gpt-5.1-codex` | `$1.7500 / 1M` | `$14.0000 / 1M` | Codex 分组 |
-| `gpt-5.1-codex-max` | `$1.8500 / 1M` | `$14.8000 / 1M` | 更高能力版本 |
-| `gpt-5.1-codex-mini` | `$0.6000 / 1M` | `$4.8000 / 1M` | 低成本版本 |
-| `gpt-5.2` | `$2.4480 / 1M` | `$19.5840 / 1M` | 更高质量输出 |
-| `gpt-5.2-codex` | `$1.7500 / 1M` | `$14.0000 / 1M` | Codex 分组 |
-
-## 生图与视频模型
-
-- Midjourney：按次计费，适合高质量图片生成
-- DALL·E 3：按次计费，语义理解能力强
-- Sora (Preview)：按次计费，适合视频生成
-- Runway Gen-3：按次计费，支持更丰富的视频控制
-
-## 使用建议
-
-- 日常编程优先看 Claude Sonnet、GPT-5.1 Codex、Gemini Flash
-- 复杂任务优先看 Claude Opus、GPT-5.2、Gemini Pro
-- 价格会随分组和上游渠道调整，精确价格以原站实时展示为准
+- 以上均为按量计费模型，输入和输出分别计费。
+- 缓存读取和缓存创建只在模型及请求实际支持缓存时产生。
+- 模型名称、上下文长度、端点支持和价格可能动态调整。
+- 账户的最终消费记录可在控制台的“使用日志”查看。
+- 官网价格数据版本：`a42d372ccf0b5dd13ecf71203521f9d2`。

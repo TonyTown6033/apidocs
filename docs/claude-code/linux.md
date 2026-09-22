@@ -48,6 +48,6 @@ npm install -g @anthropic-ai/claude-code
 
 ```bash
 echo 'export ANTHROPIC_AUTH_TOKEN="sk-你的令牌"' >> ~/.bashrc
-echo 'export ANTHROPIC_BASE_URL="https://superelite.studio/"' >> ~/.bashrc
+echo 'export ANTHROPIC_BASE_URL="https://superelite.studio"' >> ~/.bashrc
 source ~/.bashrc
 ```
